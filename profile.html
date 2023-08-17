@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard-Bank Of Western Dhaka</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="navbar bg-[#4292ee] px-8 py-0 ">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <label tabindex="0" class="btn btn-ghost lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+              </label>
+              <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                <li><a href="dashboard.html" class="font-bold text-black text-xl">Dashboard</a></li>
+                <li><a href="index.html" class="font-bold text-black text-xl">Home</a></li>
+              </ul>
+            </div>
+            <a class="font-bold text-black text-[25px] py-0 ">Bank Of <span class="text-white"> Western Dhaka</span></a>
+          </div>
+          <div class="navbar-center hidden lg:flex py-0 ">
+            <ul class="menu menu-horizontal ">
+              <li><a href="dashboard.html" class="font-bold text-black text-xl">Dashboard</a></li>
+              <li><a href="index.html" class="font-bold text-black text-xl">Home</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end py-0 ">
+              <a href="index.html" class="btn btn-sm border-none bg-[#c2c2c2] text-black hover:bg-[#dfd04a]">Logout</a>
+          </div>
+        </div>
+  </nav>
+  <div class="text-xl mt-12 breadcrumbs ml-[840px]">
+    <ul>
+      <li>
+        <a>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-4 h-4 mr-2 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
+          Dashboard
+        </a>
+      </li> 
+      <li>
+        <a>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-4 h-4 mr-2 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
+          Profile
+        </a>
+      </li> 
+    </ul>
+  </div>
+    <h1 class="text-5xl font-bold text-center mt-6 text-[#fd6060]">
+      Profile <br />
+      <span class="text-[#000000]">Bank Of Western Dhaka </span>
+    </h1>
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank Account Profile</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto py-8">
+    <div class="bg-white rounded-lg shadow-md p-8">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-2xl font-semibold">Bank Account Profile</h2>
+        <button class="bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700">Edit Profile</button>
+      </div>
+      
+      <!-- Account Information and Balance Section -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <h3 class="text-lg font-semibold mb-2">Account Information</h3>
+          <p class="text-gray-600"><span class="font-semibold">Holder's Name:</span> MD. Sahoss Khan</p>
+          <p class="text-gray-600"><span class="font-semibold">Account Number:</span> SABOWD1234567890</p>
+          <p class="text-gray-600"><span class="font-semibold">Account Type:</span> Savings</p>
+          <p class="text-gray-600"><span class="font-semibold">Branch:</span> Main Branch</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-2">Account Balance</h3>
+          <p class="text-indigo-600 text-2xl font-semibold">10,000 Tk</p>
+          <p class="text-gray-600">Last updated on: 2023-08-16</p>
+        </div>
+      </div>
+
+      <!-- Transaction History Section -->
+      <div class="mt-6">
+        <h3 class="text-lg font-semibold mb-2">Transaction History</h3>
+       <div class="overflow-x-auto">
+          <table class="min-w-full">
+            <thead>
+              <tr class="border-t">
+                <th class="py-3 px-4 text-left font-semibold text-gray-600">Date</th>
+                <th class="py-3 px-4 text-left font-semibold text-gray-600">Type</th>
+                <th class="py-3 px-4 text-left font-semibold text-gray-600">Amount</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y">
+              <tr class="hover:bg-gray-100">
+                <td class="py-2 px-4">2023-08-15</td>
+                <td class="py-2 px-4 text-indigo-600 font-semibold">Deposit</td>
+                <td class="py-2 px-4">500 Tk</td>
+              </tr>
+              <tr class="hover:bg-gray-100">
+                <td class="py-2 px-4">2023-08-14</td>
+                <td class="py-2 px-4 text-red-600 font-semibold">Withdrawal</td>
+                <td class="py-2 px-4">200 Tk</td>
+              </tr>
+              <tr class="hover:bg-gray-100">
+                <td class="py-2 px-4">2023-08-13</td>
+                <td class="py-2 px-4 text-indigo-600 font-semibold">Deposit</td>
+                <td class="py-2 px-4">1000 Tk</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Change Account Type Section -->
+      <div class="mt-6">
+        <h3 class="text-lg font-semibold mb-2">Change Account Type</h3>
+        <div class="flex items-center space-x-4">
+          <select class="border rounded-md p-2">
+            <option>Savings</option>
+            <option>High-yield savings</option>
+            <option>Money market</option>
+            <option>Recurring Deposit</option>
+            <option>Overseas Deposit</option>
+            <option>Fixed Deposit</option>
+            <option>Salary account</option>
+          </select>
+          <button class="bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700">Change</button>
+        </div>
+      </div>
+
+      <!-- Change Password Section -->
+      <div class="mt-6">
+        <h3 class="text-lg font-semibold mb-2">Change Password</h3>
+       <form>
+          <div class="mb-4">
+            <label for="currentPassword" class="block text-sm font-medium text-gray-700">Current Password</label>
+            <input type="password" id="currentPassword" name="currentPassword" class="mt-1 p-2 w-full border rounded-md focus:ring focus:ring-indigo-300" required>
+          </div>
+          <div class="mb-4">
+            <label for="newPassword" class="block text-sm font-medium text-gray-700">New Password</label>
+            <input type="password" id="newPassword" name="newPassword" class="mt-1 p-2 w-full border rounded-md focus:ring focus:ring-indigo-300" required>
+          </div>
+          <div class="mb-4">
+            <label for="confirmPassword" class="block text-sm font-medium text-gray-700">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" class="mt-1 p-2 w-full border rounded-md focus:ring focus:ring-indigo-300" required>
+          </div>
+          <button type="submit" class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700">Change Password</button>
+        </form>
+      </div>
+
+      <!-- Account Verification Section -->
+      <div class="mt-6">
+        <h3 class="text-lg font-semibold mb-2">Account Verification</h3>
+        <div class="flex items-center space-x-4">
+          <p class="text-gray-600">Verification Status: <span class="text-indigo-600 font-semibold">Verified</span></p>
+          <button class="bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700">Initiate Verification</button>
+        </div>
+      </div>
+
+<!-- Manage Beneficiaries Section -->
+<div class="mt-6">
+  <h3 class="text-lg font-semibold mb-2">Manage Beneficiaries</h3>
+  <ul class="list-disc pl-6 text-gray-600">
+    <li>Beneficiary 1: Sahoss Khan</li>
+    <li>Beneficiary 2: Sangram Khan</li>
+    <li>Beneficiary 3: Shahrirar Shifat</li>
+    <li>Beneficiary 4: Mostofa Taj</li>
+  </ul>
+
+  <form class="mt-4">
+    <label class="block mb-2 text-gray-600" for="beneficiaryName">Add Beneficiary:</label>
+    <input type="text" id="beneficiaryName" name="beneficiaryName" class="w-full border rounded-md p-2" placeholder="Enter beneficiary's name" required>
+    
+    <button type="submit" class="mt-2 bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700">Add Beneficiary</button>
+  </form>
+</div>
+
+
+
+
+
+
+<!-- Manage Alerts Section -->
+<div class="mt-6">
+  <h3 class="text-lg font-semibold mb-2">Manage Alerts</h3>
+  <form>
+    <label class="block mb-2 text-gray-600">Receive Email Alerts:</label>
+    <input type="checkbox" class="mr-2" id="emailAlerts">
+    
+    <label class="block mb-2 text-gray-600">Receive SMS Alerts:</label>
+    <input type="checkbox" class="mr-2" id="smsAlerts">
+    
+    <button class="mt-2 bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700">Save Changes</button>
+  </form>
+</div>
+
+
+
+      <!-- Support and Contact Information Section -->
+      <div class="mt-6">
+        <h3 class="text-lg font-semibold mb-2">Support and Contact Information</h3>
+        <p class="text-gray-600">For any assistance, contact our support team:</p>
+        <ul class="list-disc pl-6 text-gray-600">
+          <li>Phone: 123-456-7890</li>
+          <li>Email: support@bank.com</li>
+        </ul>
+      </div>
+
+      <!-- Account Status Section -->
+      <div class="mt-6">
+        <h3 class="text-lg font-semibold mb-2">Account Status</h3>
+        <p class="text-gray-600">Your account is in good standing. If you have any questions or concerns, please contact customer support.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+    
+  </body>
+</html>

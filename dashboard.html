@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard-Bank Of Western Dhaka</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="navbar bg-[#4292ee] px-8 py-0 ">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <label tabindex="0" class="btn btn-ghost lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+              </label>
+              <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                <li><a href="index.html" class="font-bold text-black text-xl">Home</a></li>
+                <li><a href="profile.html" class="font-bold text-black text-xl">Profile</a></li>
+              </ul>
+            </div>
+            <a class="font-bold text-black text-[25px] py-0 ">Bank Of <span class="text-white"> Western Dhaka</span></a>
+          </div>
+          <div class="navbar-center hidden lg:flex py-0 ">
+            <ul class="menu menu-horizontal ">
+              <li><a href="index.html" class="font-bold text-black text-xl">Home</a></li>
+              <li><a href="profile.html" class="font-bold text-black text-xl">Profile</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end py-0 ">
+              <a href="index.html" class="btn btn-sm border-none bg-[#c2c2c2] text-black hover:bg-[#dfd04a]">Logout</a>
+          </div>
+        </div>
+  </nav>
+  <div class="text-xl mt-12 breadcrumbs ml-[840px]">
+    <ul>
+      <li>
+        <a>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-4 h-4 mr-2 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
+          Home
+        </a>
+      </li> 
+      <li>
+        <a>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-4 h-4 mr-2 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
+          Dashboard
+        </a>
+      </li> 
+    </ul>
+  </div>
+    <h1 class="text-5xl font-bold text-center mt-6 text-[#fd6060]">
+      Dashboard <br />
+      <span class="text-[#000000]">Bank Of Western Dhaka </span>
+    </h1>
+
+    <section class="mt-20">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 w-9/12 mx-auto">
+        <div class="bg-[#51b9e2] p-8 text-white rounded-2xl">
+          <h1 class="text-[28px] font-bold">Deposit History</h1>
+          <h2  class="text-3xl font-semibold"><span id="deposit-total">000</span> Tk</h2>
+        </div>
+        <div class="bg-[#1d9b6b] p-8 text-white rounded-2xl">
+          <h1 class="text-[28px] font-bold">Withdraw History</h1>
+          <h2 class="text-3xl font-semibold"><Span id="withdraw-total">000</Span> Tk</h2>
+        </div>
+        <div class="bg-[#c04615] p-8 text-white rounded-2xl">
+          <h1 class="text-[28px] font-bold">Your Balance</h1>
+          <h2 class="text-3xl font-semibold"><span id="balance-total">10000</span> Tk</h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-20 mb-20">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-9/12 mx-auto">
+        <div class="bg-purple-500 p-8 text-white rounded-2xl">
+          <h1 class="text-[28px] font-bold">Deposit Here</h1>
+          <input
+            class="w-9/12 block mb-2 text-black font-semibold rounded-lg px-8 py-2"
+            type="number"
+            name=""
+            id="deposit-field"
+            placeholder="Enter Deposit Amount " />
+          <button
+            id="btn-deposit"
+            class="bg-black font-semibold px-8 py-2 text-white rounded-md hover:bg-white hover:text-black"
+          >
+            Deposit
+          </button>
+        </div>
+
+        <div class="bg-pink-500 p-8 text-white rounded-2xl">
+          <h1 class="text-[28px] font-bold">Withdraw Here</h1>
+          <input
+            class="w-9/12 block mb-2 rounded-lg text-black font-semibold px-8 py-2"
+            type="number"
+            name=""
+            id="withdraw-field"
+            placeholder="Enter WithDraw Amount "
+          />
+
+          <button
+            id="btn-withdraw"
+            class="bg-black font-semibold px-8 py-2 text-white rounded-md hover:bg-white hover:text-black"
+          >
+            Withdraw
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/deposit.js"></script>
+    <script src="js/withdraw.js"></script>
+  </body>
+</html>
