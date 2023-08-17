@@ -18,59 +18,48 @@
     </h1>
 
     <main>
-      <div class="flex justify-center items-center mt-16">
-        <div class="bg-[#fd9a9a] p-8 shadow-md rounded-md w-2/3 flex">
-          <div class="w-1/2 pr-6">
-            <img
-              src="images/login.gif"
-              alt="Login Image"
-              class="w-full h-auto"
-            />
+      <div class="flex items-center justify-center h-screen px-4 lg:px-0">
+        <div class="bg-[#fd9a9a] p-8 shadow-md rounded-md w-full lg:w-2/3 flex flex-col lg:flex-row">
+          <div class="w-full sm:w-1/2 pr-0 sm:pr-6">
+            <img src="images/login.gif" alt="Login Image" class="w-full h-auto" />
           </div>
-          <div class="w-1/2 mt-40 ml-28">
-            <h1 class="text-3xl pl-28 font-semibold mb-4 ">
+          <div class="w-full sm:w-1/2 mt-4 lg:pt-40 sm:mt-0">
+            <h1 class="text-2xl sm:text-3xl font-semibold mb-4">
               Please Login First
             </h1>
             <div class="mb-4">
-              <label
-                for="email"
-                class="block text-xl font-medium text-black mb-1"
-                >User Email</label
-              >
+              <label for="user-email" class="block text-lg sm:text-xl font-medium text-black mb-1">
+                User Email
+              </label>
               <input
                 type="email"
                 id="user-email"
-                name=""
                 placeholder="Enter your user email"
-                class="w-4/5 border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
+                class="w-full border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
               />
             </div>
             <div class="mb-6">
-              <label
-                for="password"
-                class="block text-xl font-medium mb-1"
-                >User Password</label>
+              <label for="user-password" class="block text-lg sm:text-xl font-medium mb-1">
+                User Password
+              </label>
               <input
                 type="password"
                 id="user-password"
-                name="password"
                 placeholder="Enter your user password"
-                class="w-4/5 border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
+                class="w-full border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
               />
             </div>
-
-          
-              <button
-                type="submit"
-                id="btn-submit"
-                class="w-40 bg-rose-500 font-semibold text-xl text-white rounded-md py-2 hover:bg-white hover:text-black transition duration-300"
-              >
-                Log In
-            
-            </div>
+            <button
+              type="submit"
+              id="btn-submit"
+              class="w-full bg-rose-500 font-semibold text-lg sm:text-xl text-white rounded-md py-2 hover:bg-white hover:text-black transition duration-300"
+            >
+              Log In
+            </button>
           </div>
         </div>
       </div>
+      
     </main>
 
     <script src="js/login.js"></script>
