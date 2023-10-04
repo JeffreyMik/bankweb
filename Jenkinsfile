@@ -5,8 +5,16 @@ pipeline {
         SSH_CREDENTIALS = credentials('my-ssh-key')  // Use the ID of your SSH credentials
     }
 
+	
+	
     stages {
-        stage('Clone web application repository to server') {
+        stage('Security test') {
+            steps {
+                echo 'Testing server on security'
+            }
+        }
+	    
+	stage('Clone web application repository to server') {
             steps {
                 echo 'Cloning Git repository'
                 sh 'rm -fr bankweb'
