@@ -14,7 +14,7 @@ pipeline {
             }
         }
 	    
-	stage('Clone web application repository to server') {
+	tage('Clone web application repository to server') {
             steps {
                 echo 'Cloning Git repository'
                 sh 'rm -fr bankweb'
