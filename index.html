@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Search Page</title>
-</head>
-<body>
-    <h1>Search for a Product</h1>
-    <form action="search.php" method="POST">
-        <label for="product_name">Product Name:</label>
-        <input type="text" name="product_name" id="product_name" />
-        <input type="submit" value="Search" />
-    </form>
-</body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Super veilige website</title>
+    </head>
+    <body>
+        <input type="text" oninput="output(this.value)" />
+        <div id="output"></div>
+        <script>
+            function output(value) {
+                document.getElementById("output").innerHTML = `Output: ${value}`;
+            }
+        </script>
+    </body>
 </html>
