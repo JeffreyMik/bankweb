@@ -22,5 +22,12 @@ pipeline {
                 }
             }
         }
+
+        stage('Scanning website on vulnerabilities') {
+            steps {
+                    echo 'Running Nikto to actively scan the docker container on vulnerabilities'
+                    sh 'nikto -h 192.168.178.50'
+            }
+        }
     }
 }
