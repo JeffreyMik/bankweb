@@ -15,9 +15,9 @@ pipeline {
         stage('Building new docker image') {
             steps {
                 dir('/home/jenkins/jenkins_dir') {
-                    echo 'Creating new docker image using Dockerfile and copying new pulled data from Github repository'
+                    echo 'Creating a new docker image using Dockerfile and copying newly pulled data from Github repository'
                     sh 'sudo docker build -t webserver:latest .'
-                    echo 'Starting up new docker container running website'
+                    echo 'Starting up a new docker container running the website'
                     sh 'sudo docker run --name webserver -d -p 80:80 webserver:latest'
                 }
             }
@@ -25,8 +25,28 @@ pipeline {
 
         stage('Scanning website on vulnerabilities') {
             steps {
-                    echo 'Running Nikto to actively scan the docker container on vulnerabilities'
-                    sh 'nikto -h 192.168.178.50'
+                echo 'Running Nikto to actively scan the docker container on vulnerabilities'
+                script {
+                    def scanResult = sh(script: 'nikto -h localhost', returnStatus: true)
+                    if (scanResult == 0) {
+                        echo 'No vulnerabilities found. Proceeding to deploy files.'
+                        currentBuild.result = 'SUCCESS'
+                    } else {
+                        error('Vulnerabilities found. Build marked as failed.')
+                    }
+                }
+            }
+        }
+
+        stage('Deploy Files If No Vulnerabilities') {
+            when {
+                expression { currentBuild.resultIsBetterOrEqualTo('SUCCESS') }
+            }
+            steps {
+                echo 'Copying files to the remote host'
+                script {
+                    sh 'scp -r /home/jenkins/jenkins_dir/bankwebapp/bankweb/* jenkins-agent@192.168.178.66:/var/www/html/'
+                }
             }
         }
     }
