@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Super veilige website</title>
+    </head>
+    <body>
+        <input type="text" oninput="output(this.value)" />
+        <div id="output"></div>
+        <script>
+            function output(value) {
+                document.getElementById("output").innerHTML = `Output: ${value}`;
+            }
+        </script>
+    </body>
+</html>
