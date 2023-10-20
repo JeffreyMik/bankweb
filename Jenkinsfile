@@ -32,6 +32,9 @@ pipeline {
                         echo 'No vulnerabilities found. Proceeding to deploy files.'
                         currentBuild.result = 'SUCCESS'
                     } else {
+                        sh 'sudo docker stop webserver'
+                        sh 'sudo docker rm webserver'
+                        sh 'sudo docker image rm webserver:latest'
                         error('Vulnerabilities found. Build marked as failed.')
                     }
                 }
@@ -46,6 +49,9 @@ pipeline {
                 echo 'Copying files to the remote host'
                 script {
                     sh 'scp -r /home/jenkins/jenkins_dir/bankwebapp/bankweb/* jenkins-agent@192.168.178.66:/var/www/html/'
+                    sh 'sudo docker stop webserver'
+                    sh 'sudo docker rm webserver'
+                    sh 'sudo docker image rm webserver:latest'
                 }
             }
         }
